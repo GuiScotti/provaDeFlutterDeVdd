@@ -11,17 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 0, 13, 255)),
-        useMaterial3: true,
-      ),
-      home: const login(),
-      routes: {
-          '/home': (context) => MyHomePage(),
-        }
-    );
+        title: 'Flutter',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: const Color.fromARGB(255, 0, 13, 255)),
+          useMaterial3: true,
+        ),
+        home: const login(),
+        routes: {
+          '/main': (context) => const MyHomePage(),
+        });
   }
 }
 
@@ -79,11 +78,11 @@ class _loginState extends State<login> {
             Padding(
               padding: EdgeInsets.only(top: 10),
               child: ElevatedButton(
-                  onPressed: () async {
+                  onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       print('validou');
                     }
-                    Navigator.pushNamed(context, '/login');
+                    Navigator.pushNamed(context, '/main');
                   },
                   child: Text('Entrar')),
             )

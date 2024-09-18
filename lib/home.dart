@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:prova/main.dart';
-
 void main() {
   runApp(const MyApp());
 }
